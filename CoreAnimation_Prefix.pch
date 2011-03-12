@@ -1,0 +1,29 @@
+//
+// Prefix header for all source files of the 'CoreAnimation' target in the 'CoreAnimation' project
+//
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iPhone SDK 3.0 and later."
+#endif
+
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+	#import <QuartzCore/QuartzCore.h>
+#endif
+
+#define DEGREES_TO_RADIANS(d) (d * M_PI / 180)
+
+#define CARelease(obj) { [obj release]; obj = nil; }
+
+static CGPoint midPoint(CGRect r) {
+    return CGPointMake(CGRectGetMidX(r), CGRectGetMidY(r));
+}
+
+static CATransform3D CATransform3DMakePerspective(CGFloat z) {
+    CATransform3D t = CATransform3DIdentity;
+    t.m34 = - 1.0 / z;
+    return t;
+}
