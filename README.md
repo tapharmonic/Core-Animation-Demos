@@ -1,1 +1,1 @@
-Demo project for the **Core Animation** presentation I gave to the March 2011 This is an [Minnesota CocoaHeads](http://www.cocoaheadsmn.org/) group meeting.
+Demo project for the **Core Animation** presentation I gave to the March 2011 [Minnesota CocoaHeads](http://www.cocoaheadsmn.org/) group meeting.
