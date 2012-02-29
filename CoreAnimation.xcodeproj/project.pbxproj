@@ -435,6 +435,7 @@
 				GCC_PREFIX_HEADER = CoreAnimation_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "CoreAnimation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "CA Demos";
 			};
 			name = Debug;
@@ -449,6 +450,7 @@
 				GCC_PREFIX_HEADER = CoreAnimation_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "CoreAnimation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "CA Demos";
 				VALIDATE_PRODUCT = YES;
 			};
