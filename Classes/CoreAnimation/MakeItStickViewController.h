@@ -1,7 +1,7 @@
 //
 //  MIT License
 //
-//  Copyright (c) 2011 Bob McCune http://bobmccune.com/
+//  Copyright (c) 2012 Bob McCune http://bobmccune.com/
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -26,8 +26,6 @@
  * Demo pointing out a gotcha when applying animations.  Need to update the model value to ensure
  * the animation's 'toValue' sticks.
  */
-@interface MakeItStickViewController : UIViewController {
-	CALayer *layer;
-}
+@interface MakeItStickViewController : UIViewController
 
 @end

@@ -1,7 +1,7 @@
 //
 //  MIT License
 //
-//  Copyright (c) 2011 Bob McCune http://bobmccune.com/
+//  Copyright (c) 2012 Bob McCune http://bobmccune.com/
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -37,7 +37,7 @@
 	
     // The animation was fun without the audio, but it's WAY better with the engine rev sound.
 	NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"engine" ofType:@"caf"]];
-	self.audioPlayer = [[[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil] autorelease];
+	self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
 	[self.audioPlayer prepareToPlay];	
 	
 	UIImage *image = [UIImage imageNamed:@"metalbackground.png"];
@@ -77,10 +77,6 @@
 	[pinLayer addAnimation:rotationAnimation forKey:@"revItUpAnimation"];
 }
 
-- (void)dealloc {
-	self.audioPlayer = nil;
-	[super dealloc];
-}
 
 @synthesize audioPlayer;
 

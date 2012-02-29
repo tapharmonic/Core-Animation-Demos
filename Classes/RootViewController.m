@@ -1,7 +1,7 @@
 //
 //  MIT License
 //
-//  Copyright (c) 2011 Bob McCune http://bobmccune.com/
+//  Copyright (c) 2012 Bob McCune http://bobmccune.com/
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -38,20 +38,22 @@
 #import "MakeItStickViewController.h"
 #import "SublayerTransformViewController.h"
 
-@interface UIViewController (Private)
+@interface UIViewController ()
+@property (nonatomic, strong) NSMutableArray *items;
 + (NSString *)displayName;
 @end
 
 @implementation RootViewController
 
+@synthesize items = _items;
+
 #pragma mark -
 #pragma mark View lifecycle
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	items = [[NSMutableArray alloc] init];
+	self.items = [[NSMutableArray alloc] init];
 	
 	NSMutableArray *layersList = [NSMutableArray array];
 	[layersList addObject:[ImplicitAnimationsViewController class]];
@@ -66,7 +68,7 @@
 	[layersList addObject:[PulseViewController class]];
 
 	NSDictionary *layers = [NSDictionary dictionaryWithObject:layersList forKey:@"Core Animation"];
-	[items addObject:layers];
+	[self.items addObject:layers];
 	
 	NSMutableArray *uiKitList = [NSMutableArray array];
 	[uiKitList addObject:[SimpleViewPropertyAnimation class]];
@@ -75,7 +77,7 @@
 
 	
 	NSDictionary *uiKits = [NSDictionary dictionaryWithObject:uiKitList forKey:@"UIKit Animation"];
-	[items addObject:uiKits];
+	[self.items addObject:uiKits];
 	
 	self.title = @"Animations";
 }
@@ -84,18 +86,18 @@
 #pragma mark Table view data source
 
 - (NSArray *)valuesForSection:(NSUInteger)section {
-	NSDictionary *dictionary = [items objectAtIndex:section];
+	NSDictionary *dictionary = [self.items objectAtIndex:section];
 	NSString *key = [[dictionary allKeys] objectAtIndex:0];
 	return [dictionary objectForKey:key];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	return [[[items objectAtIndex:section] allKeys] objectAtIndex:0];	
+	return [[[self.items objectAtIndex:section] allKeys] objectAtIndex:0];	
 }
 
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [items count];
+    return [self.items count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -109,7 +111,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
 		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
@@ -126,14 +128,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSArray *values = [self valuesForSection:indexPath.section];
 	Class clazz = [values objectAtIndex:indexPath.row];
-	id controller = [[[clazz alloc] init] autorelease];
+	id controller = [[clazz alloc] init];
 	[self.navigationController pushViewController:controller animated:YES];
 }
 
-- (void)dealloc {
-    CARelease(items);
-    [super dealloc];
-}
-
 @end
-

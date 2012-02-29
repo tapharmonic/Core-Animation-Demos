@@ -1,7 +1,7 @@
 //
 //  MIT License
 //
-//  Copyright (c) 2011 Bob McCune http://bobmccune.com/
+//  Copyright (c) 2012 Bob McCune http://bobmccune.com/
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +24,13 @@
 
 #import "MakeItStickViewController.h"
 
+@interface MakeItStickViewController ()
+@property (nonatomic, strong) CALayer *layer;
+@end
+
 @implementation MakeItStickViewController
+
+@synthesize layer = _layer;
 
 + (NSString *)displayName {
 	return @"Make it Stick";
@@ -33,25 +39,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.title = [[self class] displayName];
-	UIImage *image = [UIImage imageNamed:@"heart.png"];
-	layer = [CALayer layer];
-	layer.contents = (id)image.CGImage;
-	layer.bounds = CGRectMake(0, 0, image.size.width, image.size.height);
-	layer.position = CGPointMake(160, 200);
-	[self.view.layer addSublayer:layer];
+	UIImage *image = [UIImage imageNamed:@"heart"];
+	self.layer = [CALayer layer];
+	self.layer.contents = (id)image.CGImage;
+	self.layer.bounds = CGRectMake(0, 0, image.size.width, image.size.height);
+	self.layer.position = CGPointMake(160, 200);
+	[self.view.layer addSublayer:self.layer];
 		
 	UIGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(fadeIt)];
 	[self.view addGestureRecognizer:recognizer];
-	[recognizer release];
 }
 
 - (void)fadeIt {
 	CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
 	animation.toValue = [NSNumber numberWithFloat:0.0];
-	animation.fromValue = [NSNumber numberWithFloat:layer.opacity];
+	animation.fromValue = [NSNumber numberWithFloat:self.layer.opacity];
 	animation.duration = 1.0;
-	layer.opacity = 0.0; // This is required to update the model's value.  Comment out to see what happens.
-	[layer addAnimation:animation forKey:@"animateOpacity"];
+	self.layer.opacity = 0.0; // This is required to update the model's value.  Comment out to see what happens.
+	[self.layer addAnimation:animation forKey:@"animateOpacity"];
 }
 
 @end

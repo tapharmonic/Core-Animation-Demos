@@ -1,7 +1,7 @@
 //
 //  MIT License
 //
-//  Copyright (c) 2011 Bob McCune http://bobmccune.com/
+//  Copyright (c) 2012 Bob McCune http://bobmccune.com/
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,13 @@
 #define ROTATE_LEFT_TAG	 3
 #define ROTATE_RIGHT_TAG 4
 
+@interface BatmanViewController ()
+@property (nonatomic, strong) CALayer *logoLayer;
+@end
+
 @implementation BatmanViewController
+
+@synthesize logoLayer = _logoLayer;
 
 - (id)init {
     self = [super initWithNibName:@"BatmanView" bundle:nil];
@@ -46,13 +52,13 @@
 	
 	UIImage *image = [UIImage imageNamed:@"batman.png"];
 	
-	logoLayer = [CALayer layer];
-	logoLayer.bounds = CGRectMake(0, 0, image.size.width, image.size.height);
-	logoLayer.position = CGPointMake(160, 180);
-	logoLayer.contents = (id)image.CGImage;
+	self.logoLayer = [CALayer layer];
+	self.logoLayer.bounds = CGRectMake(0, 0, image.size.width, image.size.height);
+	self.logoLayer.position = CGPointMake(160, 180);
+	self.logoLayer.contents = (id)image.CGImage;
 	
 	// Add layer as a sublayer of the UIView's layer
-	[self.view.layer addSublayer:logoLayer];
+	[self.view.layer addSublayer:self.logoLayer];
 }
 
 - (IBAction)rotate:(id)sender {
@@ -61,7 +67,7 @@
 	rotationAnimation.toValue = [NSNumber numberWithFloat:(2 * M_PI) * direction];
 	rotationAnimation.duration = 1.0f;
 	rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-	[logoLayer addAnimation:rotationAnimation forKey:@"rotateAnimation"];
+	[self.logoLayer addAnimation:rotationAnimation forKey:@"rotateAnimation"];
 }
 
 - (void)scaleByFactor:(CGFloat)factor {
@@ -71,17 +77,17 @@
 	scaleAnimation.duration = 3.0f;
 	scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     // Set the model layer's property so the animation sticks at the 'toValue' state
-	[logoLayer setValue:scaleFactor forKeyPath:@"transform.scale"];
-	[logoLayer addAnimation:scaleAnimation forKey:@"transformAnimation"];
+	[self.logoLayer setValue:scaleFactor forKeyPath:@"transform.scale"];
+	[self.logoLayer addAnimation:scaleAnimation forKey:@"transformAnimation"];
 }
 
 - (IBAction)scaleDown {
-	CGFloat factor = [[logoLayer valueForKeyPath:@"transform.scale"] floatValue] > 1.0 ? 1.0 : 0.5;
+	CGFloat factor = [[self.logoLayer valueForKeyPath:@"transform.scale"] floatValue] > 1.0 ? 1.0 : 0.5;
 	[self scaleByFactor:factor];
 }
 
 - (IBAction)scaleUp {
-	CGFloat factor = [[logoLayer valueForKeyPath:@"transform.scale"] floatValue] == 0.5 ? 1.0 : 1.5;
+	CGFloat factor = [[self.logoLayer valueForKeyPath:@"transform.scale"] floatValue] == 0.5 ? 1.0 : 1.5;
 	[self scaleByFactor:factor];
 }
 
@@ -106,7 +112,7 @@
 	animationGroup.repeatCount = HUGE_VALF;
 	[animationGroup setAnimations:[NSArray arrayWithObjects:rotationAnimation, scaleAnimation, nil]];
 
-	[logoLayer addAnimation:animationGroup forKey:@"animationGroup"];
+	[self.logoLayer addAnimation:animationGroup forKey:@"animationGroup"];
 }
 
 @end

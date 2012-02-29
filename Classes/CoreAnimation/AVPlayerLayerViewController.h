@@ -1,7 +1,7 @@
 //
 //  MIT License
 //
-//  Copyright (c) 2011 Bob McCune http://bobmccune.com/
+//  Copyright (c) 2012 Bob McCune http://bobmccune.com/
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -27,10 +27,8 @@
 /*
  * Demo of moving AVPlayerLayer around in 3D space.
  */
-@interface AVPlayerLayerViewController : UIViewController {
-	AVPlayer *player;
-}
+@interface AVPlayerLayerViewController : UIViewController
 
-@property (nonatomic, retain) AVPlayer *player;
+@property (nonatomic, strong) AVPlayer *player;
 
 @end

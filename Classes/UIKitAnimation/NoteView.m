@@ -1,7 +1,7 @@
 //
 //  MIT License
 //
-//  Copyright (c) 2011 Bob McCune http://bobmccune.com/
+//  Copyright (c) 2012 Bob McCune http://bobmccune.com/
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -24,9 +24,14 @@
 
 #import "NoteView.h"
 
+@interface NoteView ()
+@property (nonatomic, strong) UITextView *textView;
+@end
+
 @implementation NoteView
 
-@synthesize delegate, text;
+@synthesize delegate = _delegate;
+@synthesize textView = _textView;
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -37,12 +42,12 @@
         self.layer.borderWidth = 1.0f;
         
 		// Add Text View
-		textView = [[UITextView alloc] initWithFrame:CGRectMake(10, 10, self.bounds.size.width - 20, self.bounds.size.height - 44)];
-		textView.editable = NO;
-		textView.font = [UIFont fontWithName:@"Marker Felt" size:36];
-		textView.textColor = [UIColor colorWithWhite:0.200 alpha:1.000];
-		textView.backgroundColor = [UIColor clearColor];
-		[self addSubview:textView];
+		self.textView = [[UITextView alloc] initWithFrame:CGRectMake(10, 10, self.bounds.size.width - 20, self.bounds.size.height - 44)];
+		self.textView.editable = NO;
+		self.textView.font = [UIFont fontWithName:@"Marker Felt" size:36];
+		self.textView.textColor = [UIColor colorWithWhite:0.200 alpha:1.000];
+		self.textView.backgroundColor = [UIColor clearColor];
+		[self addSubview:self.textView];
 		
 		// Add New Button
 		UIImage *newNoteImage = [UIImage imageNamed:@"new_note_icon.png"];
@@ -62,16 +67,12 @@
 }
 
 - (NSString *)text {
-	return [textView text];
+	return [self.textView text];
 }
 
 - (void)setText:(NSString *)newText {
-	[textView setText:newText];
+	[self.textView setText:newText];
 }
 
-- (void)dealloc {
-    CARelease(textView);
-    [super dealloc];
-}
 
 @end

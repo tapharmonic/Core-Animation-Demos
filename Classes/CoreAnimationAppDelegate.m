@@ -1,7 +1,7 @@
 //
 //  MIT License
 //
-//  Copyright (c) 2011 Bob McCune http://bobmccune.com/
+//  Copyright (c) 2012 Bob McCune http://bobmccune.com/
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -27,8 +27,8 @@
 
 @implementation CoreAnimationAppDelegate
 
-@synthesize window;
-@synthesize navigationController;
+@synthesize window = _window;
+@synthesize navigationController = _navigationController;
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -38,17 +38,12 @@
     // Override point for customization after application launch.
     
     // Add the navigation controller's view to the window and display.
-    [self.window addSubview:navigationController.view];
+    [self.window addSubview:self.navigationController.view];
     [self.window makeKeyAndVisible];
 
     return YES;
 }
 
-- (void)dealloc {
-	[navigationController release];
-	[window release];
-	[super dealloc];
-}
 
 
 @end

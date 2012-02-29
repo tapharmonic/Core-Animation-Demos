@@ -1,7 +1,7 @@
 //
 //  MIT License
 //
-//  Copyright (c) 2011 Bob McCune http://bobmccune.com/
+//  Copyright (c) 2012 Bob McCune http://bobmccune.com/
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -25,9 +25,7 @@
 /*
  * Demo showing how to animate transforms and combine multiple animations into a CAAnimationGroup.
  */
-@interface BatmanViewController : UIViewController {
-	CALayer *logoLayer;
-}
+@interface BatmanViewController : UIViewController
 
 - (IBAction)rotate:(id)sender;
 - (IBAction)scaleUp;

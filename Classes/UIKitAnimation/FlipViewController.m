@@ -1,7 +1,7 @@
 //
 //  MIT License
 //
-//  Copyright (c) 2011 Bob McCune http://bobmccune.com/
+//  Copyright (c) 2012 Bob McCune http://bobmccune.com/
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -57,8 +57,6 @@
 	UIGestureRecognizer *backViewTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(flipViews)];
 	[frontView addGestureRecognizer:frontViewTapRecognizer];
 	[backView addGestureRecognizer:backViewTapRecognizer];
-	[frontViewTapRecognizer release];
-	[backViewTapRecognizer release];
 }
 
 - (void)flipViews {
@@ -74,10 +72,7 @@
 }
 
 - (void)dealloc {
-	[frontView release];
-	[backView release];
 	[UIApplication sharedApplication].keyWindow.backgroundColor = [UIColor whiteColor];
-    [super dealloc];
 }
 
 

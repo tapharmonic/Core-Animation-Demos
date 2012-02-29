@@ -1,7 +1,7 @@
 //
 //  MIT License
 //
-//  Copyright (c) 2011 Bob McCune http://bobmccune.com/
+//  Copyright (c) 2012 Bob McCune http://bobmccune.com/
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -26,6 +26,8 @@
 #import <AVFoundation/AVFoundation.h>
 
 @implementation AVPlayerLayerViewController
+
+@synthesize player = _player;
 
 + (NSString *)displayName {
 	return @"Amazon Babe";
@@ -91,10 +93,6 @@
 
 - (void)dealloc {
 	[self.player pause];
-	self.player = nil;
-	[super dealloc];
 }
-
-@synthesize player;
 
 @end

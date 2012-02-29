@@ -1,7 +1,7 @@
 //
 //  MIT License
 //
-//  Copyright (c) 2011 Bob McCune http://bobmccune.com/
+//  Copyright (c) 2012 Bob McCune http://bobmccune.com/
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -34,7 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];    
 	self.title = [[self class] displayName];
-	self.noteView = [[[NoteView alloc] initWithFrame:CGRectMake(0, 0, 280, 300)] autorelease];
+	self.noteView = [[NoteView alloc] initWithFrame:CGRectMake(0, 0, 280, 300)];
 	self.noteView.delegate = self;
 	self.noteView.text = @"A computer once beat me at chess, but it was no match for me at kick boxing.\n-Emo Philips";
 	self.nextText = @"A lot of people are afraid of heights. Not me, I'm afraid of widths.\n-Steven Wright";
@@ -44,7 +44,7 @@
 
     // Shadow needs to be applied to the containing layer so it doesn't blip when the animation occurs.
     // Hat tip to Troy for pointing that out!
-    UIView *containerView = [[[UIView alloc] initWithFrame:CGRectMake(20, 20, 280, 300)] autorelease];
+    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(20, 20, 280, 300)];
     containerView.backgroundColor = [UIColor clearColor];
     containerView.layer.shadowOffset = CGSizeMake(0, 2);
     containerView.layer.shadowOpacity = 0.80;
@@ -64,11 +64,6 @@
 					}];
 }
 
-- (void)dealloc {
-    self.noteView = nil;
-    self.nextText = nil;
-    [super dealloc];
-}
 
 @synthesize noteView, nextText;
 
