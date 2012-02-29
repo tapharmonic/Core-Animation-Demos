@@ -24,10 +24,7 @@
 
 @class NoteView;
 
-@interface StickyNotesViewController : UIViewController {
-	NoteView *noteView;
-	NSString *nextText;
-}
+@interface StickyNotesViewController : UIViewController
 
 @property (nonatomic, strong) NoteView *noteView;
 @property (nonatomic, copy) NSString *nextText;

@@ -25,8 +25,6 @@
 /*
  * Simple CABasicAnimation demo to give a pulsing/throbbing effect
  */
-@interface PulseViewController : UIViewController {
-
-}
+@interface PulseViewController : UIViewController
 
 @end

@@ -27,6 +27,9 @@
 
 @implementation StickyNotesViewController
 
+@synthesize noteView = _noteView;
+@synthesize nextText = _nextText;
+
 + (NSString *)displayName {
 	return @"Sticky Notes";
 }
@@ -48,23 +51,21 @@
     containerView.backgroundColor = [UIColor clearColor];
     containerView.layer.shadowOffset = CGSizeMake(0, 2);
     containerView.layer.shadowOpacity = 0.80;
-    [containerView addSubview:noteView];
+    [containerView addSubview:self.noteView];
 	[self.view addSubview:containerView];
 }
 
 - (void)addNoteTapped {
-	[UIView transitionWithView:noteView duration:0.6
+	[UIView transitionWithView:self.noteView duration:0.6
 					   options:UIViewAnimationOptionTransitionCurlUp
 					animations:^{
-						NSString *currentText = noteView.text;
-						noteView.text = nextText;
+						NSString *currentText = self.noteView.text;
+						self.noteView.text = self.nextText;
 						self.nextText = currentText;
 					} completion:^(BOOL finished){
 						
 					}];
 }
 
-
-@synthesize noteView, nextText;
 
 @end

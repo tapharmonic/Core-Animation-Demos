@@ -24,7 +24,13 @@
 
 #import "SublayerTransformViewController.h"
 
+@interface SublayerTransformViewController ()
+@property (nonatomic, strong) CALayer *rootLayer;
+@end
+
 @implementation SublayerTransformViewController
+
+@synthesize rootLayer = _rootLayer;
 
 + (NSString *)displayName {
 	return @"Sublayer Transforms";
@@ -45,7 +51,7 @@
 		layer.shadowOpacity = 0.35;
 		layer.shadowColor = [UIColor darkGrayColor].CGColor;
 		layer.shouldRasterize = YES;
-		[rootLayer addSublayer:layer];
+		[self.rootLayer addSublayer:layer];
 	}
 }
 
@@ -53,11 +59,11 @@
     [super viewDidLoad];
 	self.title = [[self class] displayName];
     
-	rootLayer = [CALayer layer];
+	self.rootLayer = [CALayer layer];
     // Apply perspective transform
-	rootLayer.sublayerTransform = CATransform3DMakePerspective(1000);
-	rootLayer.frame = self.view.bounds;
-	[self.view.layer addSublayer:rootLayer];
+	self.rootLayer.sublayerTransform = CATransform3DMakePerspective(1000);
+	self.rootLayer.frame = self.view.bounds;
+	[self.view.layer addSublayer:self.rootLayer];
 	
 	NSArray *colors = [NSArray arrayWithObjects:[UIColor redColor], [UIColor greenColor], [UIColor purpleColor], nil];
 	[self addLayersWithColors:colors];
@@ -78,7 +84,7 @@
 	
 	int tx = 0;
     // Loop through the sublayers and attach the animations
-	for (CALayer *layer in [rootLayer sublayers]) {
+	for (CALayer *layer in [self.rootLayer sublayers]) {
 		[layer addAnimation:transformAnimation forKey:nil];
 		
         // Create animation to translate along the X axis

@@ -25,8 +25,6 @@
 /*
  * Demo showing how to produce reflection effects by compositing layers.
  */
-@interface ReflectionViewController : UIViewController {
-
-}
+@interface ReflectionViewController : UIViewController
 
 @end

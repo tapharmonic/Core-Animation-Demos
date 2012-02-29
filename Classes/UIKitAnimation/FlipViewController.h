@@ -22,11 +22,6 @@
 //  THE SOFTWARE.
 //
 
-
-@interface FlipViewController : UIViewController {
-	UIView *frontView;
-	UIImageView *backView;
-	BOOL displayingFrontView;
-}
+@interface FlipViewController : UIViewController
 
 @end

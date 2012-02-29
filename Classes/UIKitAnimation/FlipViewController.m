@@ -24,7 +24,17 @@
 
 #import "FlipViewController.h"
 
+@interface  FlipViewController ()
+@property (nonatomic, strong) UIView *frontView;
+@property (nonatomic, strong) UIImageView *backView;
+@property (nonatomic) BOOL displayingFrontView;
+@end
+
 @implementation FlipViewController
+
+@synthesize frontView = _frontView;
+@synthesize backView = _backView;
+@synthesize displayingFrontView = _displayingFrontView;
 
 + (NSString *)displayName {
 	return @"Flip Views";
@@ -37,43 +47,43 @@
 	UIColor *backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pattern.png"]];
 	[UIApplication sharedApplication].keyWindow.backgroundColor = backgroundColor;
 	
-	frontView = [[UIView alloc] initWithFrame:self.view.bounds];
-	frontView.backgroundColor = [UIColor colorWithRed:0.345 green:0.349 blue:0.365 alpha:1.000];
+	self.frontView = [[UIView alloc] initWithFrame:self.view.bounds];
+	self.frontView.backgroundColor = [UIColor colorWithRed:0.345 green:0.349 blue:0.365 alpha:1.000];
 	UIImageView *caLogoView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"caLogo.png"]];
 	caLogoView.frame = CGRectMake(70, 80, caLogoView.bounds.size.width, caLogoView.bounds.size.height);
 
-	[frontView addSubview:caLogoView];
+	[self.frontView addSubview:caLogoView];
 	
 	UIImage *backImage = [UIImage imageNamed:@"backView.png"];
-	backView = [[UIImageView alloc] initWithImage:backImage];
-	backView.userInteractionEnabled = YES;
+	self.backView = [[UIImageView alloc] initWithImage:backImage];
+	self.backView.userInteractionEnabled = YES;
 	
-	[self.view addSubview:backView];
-	[self.view addSubview:frontView];
+	[self.view addSubview:self.backView];
+	[self.view addSubview:self.frontView];
 	
-	displayingFrontView = YES;
+	self.displayingFrontView = YES;
 	
 	UIGestureRecognizer *frontViewTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(flipViews)];
 	UIGestureRecognizer *backViewTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(flipViews)];
-	[frontView addGestureRecognizer:frontViewTapRecognizer];
-	[backView addGestureRecognizer:backViewTapRecognizer];
+	[self.frontView addGestureRecognizer:frontViewTapRecognizer];
+	[self.backView addGestureRecognizer:backViewTapRecognizer];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+	[super viewWillDisappear:animated];
+	[UIApplication sharedApplication].keyWindow.backgroundColor = [UIColor whiteColor];	
 }
 
 - (void)flipViews {
-	[UIView transitionFromView:(displayingFrontView) ? frontView : backView
-						toView:(displayingFrontView) ? backView : frontView
+	[UIView transitionFromView:(self.displayingFrontView) ? self.frontView : self.backView
+						toView:(self.displayingFrontView) ? self.backView : self.frontView
 					  duration:0.75 
-					   options:(displayingFrontView ? UIViewAnimationOptionTransitionFlipFromRight : UIViewAnimationOptionTransitionFlipFromLeft)
+					   options:(self.displayingFrontView ? UIViewAnimationOptionTransitionFlipFromRight : UIViewAnimationOptionTransitionFlipFromLeft)
 					completion:^(BOOL finished) {
 						if (finished) {
-							displayingFrontView = !displayingFrontView;
+							self.displayingFrontView = !self.displayingFrontView;
 						}
 					}];
 }
-
-- (void)dealloc {
-	[UIApplication sharedApplication].keyWindow.backgroundColor = [UIColor whiteColor];
-}
-
 
 @end

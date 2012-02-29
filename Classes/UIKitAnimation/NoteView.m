@@ -50,7 +50,7 @@
 		[self addSubview:self.textView];
 		
 		// Add New Button
-		UIImage *newNoteImage = [UIImage imageNamed:@"new_note_icon.png"];
+		UIImage *newNoteImage = [UIImage imageNamed:@"new_note_icon"];
 		UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
 		button.frame = CGRectMake(self.bounds.size.width - 34, self.bounds.size.height - 36, 24, 26);
 		[button setBackgroundImage:newNoteImage forState:UIControlStateNormal];
@@ -73,6 +73,5 @@
 - (void)setText:(NSString *)newText {
 	[self.textView setText:newText];
 }
-
 
 @end

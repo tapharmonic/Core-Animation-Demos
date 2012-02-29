@@ -22,9 +22,6 @@
 //  THE SOFTWARE.
 //
 
-@interface SimpleViewPropertyAnimation : UIViewController {
-	UIView *fadeMeView;
-	UIView *moveMeView;
-}
+@interface SimpleViewPropertyAnimation : UIViewController
 
 @end

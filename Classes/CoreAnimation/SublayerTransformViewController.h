@@ -25,8 +25,6 @@
 /*
  * Demo showing moving layers around in 3D space.
  */
-@interface SublayerTransformViewController : UIViewController {
-	CALayer *rootLayer;
-}
+@interface SublayerTransformViewController : UIViewController
 
 @end

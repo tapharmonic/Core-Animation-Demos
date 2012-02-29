@@ -24,7 +24,17 @@
 
 #import "PacmanViewController.h"
 
+@interface PacmanViewController ()
+@property (nonatomic, strong) CAShapeLayer *shapeLayer;
+@property (nonatomic, strong) UIBezierPath *pacmanOpenPath;
+@property (nonatomic, strong) UIBezierPath *pacmanClosedPath;
+@end
+
 @implementation PacmanViewController
+
+@synthesize shapeLayer = _shapeLayer;
+@synthesize pacmanOpenPath = _pacmanOpenPath;
+@synthesize pacmanClosedPath = _pacmanClosedPath;
 
 + (NSString *)displayName {
 	return @"CAcman";
@@ -42,32 +52,32 @@
 	CGPoint arcCenter = CGPointMake(radius, radius);
 	
     // Create a UIBezierPath for Pacman's open state
-	pacmanOpenPath = [UIBezierPath bezierPathWithArcCenter:arcCenter
+	self.pacmanOpenPath = [UIBezierPath bezierPathWithArcCenter:arcCenter
 															   radius:radius 
 														   startAngle:DEGREES_TO_RADIANS(35) 
 															 endAngle:DEGREES_TO_RADIANS(315)
 															clockwise:YES];	
-	[pacmanOpenPath addLineToPoint:arcCenter];
-	[pacmanOpenPath closePath];
+	[self.pacmanOpenPath addLineToPoint:arcCenter];
+	[self.pacmanOpenPath closePath];
 	
     // Create a UIBezierPath for Pacman's close state
-	pacmanClosedPath = [UIBezierPath bezierPathWithArcCenter:arcCenter
+	self.pacmanClosedPath = [UIBezierPath bezierPathWithArcCenter:arcCenter
 															   radius:radius 
 														   startAngle:DEGREES_TO_RADIANS(1) 
 															 endAngle:DEGREES_TO_RADIANS(359) 
 															clockwise:YES];
-	[pacmanClosedPath addLineToPoint:arcCenter];
-	[pacmanClosedPath closePath];	
+	[self.pacmanClosedPath addLineToPoint:arcCenter];
+	[self.pacmanClosedPath closePath];	
 	
-    // Create a CAShapeLayer for Pacman, fill with yellow
-	shapeLayer = [CAShapeLayer layer];
-	shapeLayer.fillColor = [UIColor yellowColor].CGColor;
-	shapeLayer.path = pacmanClosedPath.CGPath;
-	shapeLayer.strokeColor = [UIColor grayColor].CGColor;
-	shapeLayer.lineWidth = 1.0f;
-	shapeLayer.bounds = CGRectMake(0, 0, diameter, diameter);
-	shapeLayer.position = CGPointMake(-40, -100);
-	[self.view.layer addSublayer:shapeLayer];
+    // Create a CAself.shapeLayer for Pacman, fill with yellow
+	self.shapeLayer = [CAShapeLayer layer];
+	self.shapeLayer.fillColor = [UIColor yellowColor].CGColor;
+	self.shapeLayer.path = self.pacmanClosedPath.CGPath;
+	self.shapeLayer.strokeColor = [UIColor grayColor].CGColor;
+	self.shapeLayer.lineWidth = 1.0f;
+	self.shapeLayer.bounds = CGRectMake(0, 0, diameter, diameter);
+	self.shapeLayer.position = CGPointMake(-40, -100);
+	[self.view.layer addSublayer:self.shapeLayer];
 	
 	SEL startSelector = @selector(startAnimation);
 	UIGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:startSelector];
@@ -86,10 +96,10 @@
 	chompAnimation.repeatCount = HUGE_VALF;
 	chompAnimation.autoreverses = YES;
     // Animate between the two path values
-	chompAnimation.fromValue = (id)pacmanClosedPath.CGPath;
-	chompAnimation.toValue = (id)pacmanOpenPath.CGPath;
+	chompAnimation.fromValue = (id)self.pacmanClosedPath.CGPath;
+	chompAnimation.toValue = (id)self.pacmanOpenPath.CGPath;
 	
-	[shapeLayer addAnimation:chompAnimation forKey:@"chompAnimation"];
+	[self.shapeLayer addAnimation:chompAnimation forKey:@"chompAnimation"];
 	
 	// Create digital '2'-shaped path
 	UIBezierPath *path = [UIBezierPath bezierPath];
@@ -105,7 +115,7 @@
 	moveAnimation.duration = 8.0f;
     // Setting the rotation mode ensures Pacman's mouth is always forward.  This is a very convenient CA feature.
 	moveAnimation.rotationMode = kCAAnimationRotateAuto;
-	[shapeLayer addAnimation:moveAnimation forKey:@"moveAnimation"];
+	[self.shapeLayer addAnimation:moveAnimation forKey:@"moveAnimation"];
 }
 
 

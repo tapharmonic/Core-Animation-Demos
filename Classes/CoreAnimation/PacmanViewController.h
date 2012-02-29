@@ -25,10 +25,7 @@
 /*
  * 80's flashback demo showing how to animate a CAShape layer using CABasicAnimation and CAKeyframeAnimation.
  */
-@interface PacmanViewController : UIViewController {
-	CAShapeLayer *shapeLayer;
-	UIBezierPath *pacmanOpenPath, *pacmanClosedPath;
-}
+@interface PacmanViewController : UIViewController
 
 @end
 

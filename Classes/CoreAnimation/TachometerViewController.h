@@ -22,17 +22,9 @@
 //  THE SOFTWARE.
 //
 
-@class AVAudioPlayer;
-
 /*
  * Demo showing CABasicAnimation to animate a rotation transform.
  */
-@interface TachometerViewController : UIViewController {
-	AVAudioPlayer *audioPlayer;
-	CALayer *tachLayer;
-	CALayer *pinLayer;
-}
-
-@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
+@interface TachometerViewController : UIViewController
 
 @end
