@@ -32,10 +32,6 @@
 
 @implementation FlipViewController
 
-@synthesize frontView = _frontView;
-@synthesize backView = _backView;
-@synthesize displayingFrontView = _displayingFrontView;
-
 + (NSString *)displayName {
 	return @"Flip Views";
 }

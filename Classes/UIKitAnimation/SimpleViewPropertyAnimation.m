@@ -31,9 +31,6 @@
 
 @implementation SimpleViewPropertyAnimation
 
-@synthesize fadeMeView = _fadeMeView;
-@synthesize moveMeView = _moveMeView;
-
 + (NSString *)displayName {
 	return @"Block-based Animations";
 }

@@ -54,13 +54,13 @@
 	reflectionLayer.borderWidth = imageLayer.borderWidth;
 	reflectionLayer.opacity = 0.5;
 	// Transform X by 180 degrees
-	[reflectionLayer setValue:[NSNumber numberWithFloat:DEGREES_TO_RADIANS(180)] forKeyPath:@"transform.rotation.x"];
+	[reflectionLayer setValue:@(DEGREES_TO_RADIANS(180)) forKeyPath:@"transform.rotation.x"];
 
 	// Gradient Layer - Use as mask
 	CAGradientLayer *gradientLayer = [CAGradientLayer layer];
 	gradientLayer.bounds = reflectionLayer.bounds;
 	gradientLayer.position = CGPointMake(reflectionLayer.bounds.size.width / 2, reflectionLayer.bounds.size.height * 0.65);
-	gradientLayer.colors = [NSArray arrayWithObjects:(id)[[UIColor clearColor] CGColor],(id)[[UIColor whiteColor] CGColor], nil];
+	gradientLayer.colors = @[(id)[UIColor clearColor].CGColor,(id)[UIColor whiteColor].CGColor];
 	gradientLayer.startPoint = CGPointMake(0.5, 0.5);
 	gradientLayer.endPoint = CGPointMake(0.5, 1.0);
 

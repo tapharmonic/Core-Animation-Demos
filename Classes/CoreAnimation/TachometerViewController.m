@@ -35,10 +35,6 @@
 
 @implementation TachometerViewController
 
-@synthesize pinLayer = _pinLayer;
-@synthesize tachLayer = _tachLayer;
-@synthesize audioPlayer = _audioPlayer;
-
 + (NSString *)displayName {
 	return @"Start Me Up";
 }
@@ -82,7 +78,7 @@
 - (void)go:(id)sender {
 	[self.audioPlayer play];
 	CABasicAnimation* rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-	rotationAnimation.toValue = [NSNumber numberWithFloat:(DEGREES_TO_RADIANS(160))];
+	rotationAnimation.toValue = @(DEGREES_TO_RADIANS(160));
 	rotationAnimation.duration = 1.0f;
 	rotationAnimation.autoreverses = YES; // Very convenient CA feature for an animation like this
 	rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];

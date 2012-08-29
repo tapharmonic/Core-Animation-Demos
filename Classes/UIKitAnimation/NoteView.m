@@ -30,9 +30,6 @@
 
 @implementation NoteView
 
-@synthesize delegate = _delegate;
-@synthesize textView = _textView;
-
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {

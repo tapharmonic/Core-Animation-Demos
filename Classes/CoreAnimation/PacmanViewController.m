@@ -32,10 +32,6 @@
 
 @implementation PacmanViewController
 
-@synthesize shapeLayer = _shapeLayer;
-@synthesize pacmanOpenPath = _pacmanOpenPath;
-@synthesize pacmanClosedPath = _pacmanClosedPath;
-
 + (NSString *)displayName {
 	return @"CAcman";
 }

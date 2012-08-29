@@ -35,9 +35,6 @@
 
 @implementation ImplicitAnimationsViewController
 
-@synthesize actionsSwitch = _actionsSwitch;
-@synthesize layer = _layer;
-
 + (NSString *)displayName {
 	return @"Animatable Properties";
 }

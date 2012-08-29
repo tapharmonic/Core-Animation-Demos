@@ -18,13 +18,14 @@
 		C423AA4C1325414100B2A34D /* StickyNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C423AA4B1325414100B2A34D /* StickyNotesViewController.m */; };
 		C423AA52132543A300B2A34D /* NoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = C423AA51132543A300B2A34D /* NoteView.m */; };
 		C4334BB813248BE80023A4EA /* CharlieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4334BB713248BE80023A4EA /* CharlieViewController.m */; };
+		C43499D015ECDD3000AD9F40 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43499CF15ECDD3000AD9F40 /* AVFoundation.framework */; };
+		C43499D215ECDD9600AD9F40 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43499D115ECDD9500AD9F40 /* CoreMedia.framework */; };
 		C43648F71323902200107F88 /* ImplicitAnimationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C43648F01323902200107F88 /* ImplicitAnimationsViewController.m */; };
 		C436495F1323954E00107F88 /* BatmanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C436495A1323954E00107F88 /* BatmanViewController.m */; };
 		C43649601323954E00107F88 /* PacmanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C436495C1323954E00107F88 /* PacmanViewController.m */; };
 		C43649611323954E00107F88 /* TachometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C436495E1323954E00107F88 /* TachometerViewController.m */; };
 		C456E7DC1328A45700E7E245 /* SublayerTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C456E7DB1328A45700E7E245 /* SublayerTransformViewController.m */; };
 		C462EEE0132576FD00D0F181 /* AVPlayerLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C462EEDF132576FD00D0F181 /* AVPlayerLayerViewController.m */; };
-		C462EEE41325777200D0F181 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C462EEE31325777200D0F181 /* AVFoundation.framework */; };
 		C4885B241324B57200E9CAD2 /* SimpleViewPropertyAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4885B231324B57200E9CAD2 /* SimpleViewPropertyAnimation.m */; };
 		C4888927132BFF470097A44E /* engine.caf in Resources */ = {isa = PBXBuildFile; fileRef = C4888907132BFF470097A44E /* engine.caf */; };
 		C4888928132BFF470097A44E /* arrow-down.png in Resources */ = {isa = PBXBuildFile; fileRef = C4888909132BFF470097A44E /* arrow-down.png */; };
@@ -80,6 +81,8 @@
 		C423AA51132543A300B2A34D /* NoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteView.m; sourceTree = "<group>"; };
 		C4334BB613248BE80023A4EA /* CharlieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharlieViewController.h; sourceTree = "<group>"; };
 		C4334BB713248BE80023A4EA /* CharlieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharlieViewController.m; sourceTree = "<group>"; };
+		C43499CF15ECDD3000AD9F40 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C43499D115ECDD9500AD9F40 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		C43648EF1323902200107F88 /* ImplicitAnimationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImplicitAnimationsViewController.h; sourceTree = "<group>"; };
 		C43648F01323902200107F88 /* ImplicitAnimationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImplicitAnimationsViewController.m; sourceTree = "<group>"; };
 		C43649591323954E00107F88 /* BatmanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatmanViewController.h; sourceTree = "<group>"; };
@@ -92,7 +95,6 @@
 		C456E7DB1328A45700E7E245 /* SublayerTransformViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SublayerTransformViewController.m; sourceTree = "<group>"; };
 		C462EEDE132576FD00D0F181 /* AVPlayerLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerLayerViewController.h; sourceTree = "<group>"; };
 		C462EEDF132576FD00D0F181 /* AVPlayerLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerLayerViewController.m; sourceTree = "<group>"; };
-		C462EEE31325777200D0F181 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C4885B221324B57200E9CAD2 /* SimpleViewPropertyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleViewPropertyAnimation.h; sourceTree = "<group>"; };
 		C4885B231324B57200E9CAD2 /* SimpleViewPropertyAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleViewPropertyAnimation.m; sourceTree = "<group>"; };
 		C4888907132BFF470097A44E /* engine.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = engine.caf; sourceTree = "<group>"; };
@@ -135,11 +137,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43499D015ECDD3000AD9F40 /* AVFoundation.framework in Frameworks */,
+				C43499D215ECDD9600AD9F40 /* CoreMedia.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				C4DDB1A41320BAB3005E4D71 /* QuartzCore.framework in Frameworks */,
-				C462EEE41325777200D0F181 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,8 +194,9 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C43499D115ECDD9500AD9F40 /* CoreMedia.framework */,
+				C43499CF15ECDD3000AD9F40 /* AVFoundation.framework */,
 				C4DDB1A31320BAB3005E4D71 /* QuartzCore.framework */,
-				C462EEE31325777200D0F181 /* AVFoundation.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
@@ -221,10 +225,10 @@
 				C4C6AFD31327146E005AB613 /* PulseViewController.m */,
 				C4219A4A1325C70900FB5EA0 /* ReflectionViewController.h */,
 				C4219A4B1325C70900FB5EA0 /* ReflectionViewController.m */,
-				C436495D1323954E00107F88 /* TachometerViewController.h */,
-				C436495E1323954E00107F88 /* TachometerViewController.m */,
 				C456E7DA1328A45700E7E245 /* SublayerTransformViewController.h */,
 				C456E7DB1328A45700E7E245 /* SublayerTransformViewController.m */,
+				C436495D1323954E00107F88 /* TachometerViewController.h */,
+				C436495E1323954E00107F88 /* TachometerViewController.m */,
 			);
 			path = CoreAnimation;
 			sourceTree = "<group>";
@@ -433,9 +437,9 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CoreAnimation_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "CoreAnimation-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "CA Demos";
 			};
 			name = Debug;
@@ -448,9 +452,9 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CoreAnimation_Prefix.pch;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "CoreAnimation-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "CA Demos";
 				VALIDATE_PRODUCT = YES;
 			};

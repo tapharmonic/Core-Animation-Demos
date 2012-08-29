@@ -27,8 +27,6 @@
 
 @implementation AVPlayerLayerViewController
 
-@synthesize player = _player;
-
 + (NSString *)displayName {
 	return @"Amazon Babe";
 }
@@ -87,7 +85,7 @@
 	CALayer *layer = [[self.view.layer sublayers] objectAtIndex:0];
 	CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.x"];
 	animation.duration = 1.25f;
-	animation.toValue = [NSNumber numberWithFloat:DEGREES_TO_RADIANS(360)];
+	animation.toValue = @(DEGREES_TO_RADIANS(360));
 	[layer addAnimation:animation forKey:@"spinAnimation"];
 }
 

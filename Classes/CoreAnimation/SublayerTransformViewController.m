@@ -30,8 +30,6 @@
 
 @implementation SublayerTransformViewController
 
-@synthesize rootLayer = _rootLayer;
-
 + (NSString *)displayName {
 	return @"Sublayer Transforms";
 }
@@ -65,7 +63,7 @@
 	self.rootLayer.frame = self.view.bounds;
 	[self.view.layer addSublayer:self.rootLayer];
 	
-	NSArray *colors = [NSArray arrayWithObjects:[UIColor redColor], [UIColor greenColor], [UIColor purpleColor], nil];
+	NSArray *colors = @[[UIColor redColor], [UIColor greenColor], [UIColor purpleColor]];
 	[self addLayersWithColors:colors];
 	
 	[self performSelector:@selector(rotateLayers) withObject:nil afterDelay:1.0];

@@ -27,21 +27,18 @@
 
 @implementation StickyNotesViewController
 
-@synthesize noteView = _noteView;
-@synthesize nextText = _nextText;
-
 + (NSString *)displayName {
 	return @"Sticky Notes";
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];    
+    [super viewDidLoad];
 	self.title = [[self class] displayName];
 	self.noteView = [[NoteView alloc] initWithFrame:CGRectMake(0, 0, 280, 300)];
 	self.noteView.delegate = self;
 	self.noteView.text = @"A computer once beat me at chess, but it was no match for me at kick boxing.\n-Emo Philips";
 	self.nextText = @"A lot of people are afraid of heights. Not me, I'm afraid of widths.\n-Steven Wright";
-	
+
 	UIImage *corkboard = [UIImage imageNamed:@"corkboard.png"];
 	self.view.backgroundColor = [UIColor colorWithPatternImage:corkboard];
 
@@ -63,7 +60,7 @@
 						self.noteView.text = self.nextText;
 						self.nextText = currentText;
 					} completion:^(BOOL finished){
-						
+
 					}];
 }
 

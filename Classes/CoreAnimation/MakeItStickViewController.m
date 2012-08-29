@@ -30,8 +30,6 @@
 
 @implementation MakeItStickViewController
 
-@synthesize layer = _layer;
-
 + (NSString *)displayName {
 	return @"Make it Stick";
 }
@@ -52,8 +50,8 @@
 
 - (void)fadeIt {
 	CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-	animation.toValue = [NSNumber numberWithFloat:0.0];
-	animation.fromValue = [NSNumber numberWithFloat:self.layer.opacity];
+	animation.toValue = @0.0f;
+	animation.fromValue = @(self.layer.opacity);
 	animation.duration = 1.0;
 	self.layer.opacity = 0.0; // This is required to update the model's value.  Comment out to see what happens.
 	[self.layer addAnimation:animation forKey:@"animateOpacity"];

@@ -39,13 +39,14 @@
 #import "SublayerTransformViewController.h"
 
 @interface UIViewController ()
-@property (nonatomic, strong) NSMutableArray *items;
 + (NSString *)displayName;
 @end
 
-@implementation RootViewController
+@interface RootViewController ()
+@property (nonatomic, strong) NSMutableArray *items;
+@end
 
-@synthesize items = _items;
+@implementation RootViewController
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -53,7 +54,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	self.items = [[NSMutableArray alloc] init];
+	self.items = [NSMutableArray array];
 	
 	NSMutableArray *layersList = [NSMutableArray array];
 	[layersList addObject:[ImplicitAnimationsViewController class]];
@@ -67,7 +68,7 @@
 	[layersList addObject:[ReflectionViewController class]];
 	[layersList addObject:[PulseViewController class]];
 
-	NSDictionary *layers = [NSDictionary dictionaryWithObject:layersList forKey:@"Core Animation"];
+	NSDictionary *layers = @{@"Core Animation": layersList};
 	[self.items addObject:layers];
 	
 	NSMutableArray *uiKitList = [NSMutableArray array];
@@ -76,7 +77,7 @@
 	[uiKitList addObject:[FlipViewController class]];
 
 	
-	NSDictionary *uiKits = [NSDictionary dictionaryWithObject:uiKitList forKey:@"UIKit Animation"];
+	NSDictionary *uiKits = @{@"UIKit Animation": uiKitList};
 	[self.items addObject:uiKits];
 	
 	self.title = @"Animations";

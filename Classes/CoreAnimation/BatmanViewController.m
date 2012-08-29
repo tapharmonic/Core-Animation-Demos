@@ -33,8 +33,6 @@
 
 @implementation BatmanViewController
 
-@synthesize logoLayer = _logoLayer;
-
 - (id)init {
     self = [super initWithNibName:@"BatmanView" bundle:nil];
     return self;
@@ -64,7 +62,7 @@
 - (IBAction)rotate:(id)sender {
 	int direction = [sender tag] == ROTATE_LEFT_TAG ? -1 : 1;
 	CABasicAnimation* rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-	rotationAnimation.toValue = [NSNumber numberWithFloat:(2 * M_PI) * direction];
+	rotationAnimation.toValue = @((2 * M_PI) * direction);
 	rotationAnimation.duration = 1.0f;
 	rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
 	[self.logoLayer addAnimation:rotationAnimation forKey:@"rotateAnimation"];
@@ -72,7 +70,7 @@
 
 - (void)scaleByFactor:(CGFloat)factor {
 	CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-    NSNumber *scaleFactor = [NSNumber numberWithFloat:factor];
+    NSNumber *scaleFactor = @(factor);
 	scaleAnimation.toValue = scaleFactor;
 	scaleAnimation.duration = 3.0f;
 	scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
@@ -94,15 +92,15 @@
 // Combine scale and rotate transform into group.  Let animation group repeat indefinitely
 - (IBAction)doBatmanAnimation {
 	CABasicAnimation* rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-	rotationAnimation.toValue = [NSNumber numberWithFloat:(2 * M_PI) * 3]; // 3 is the number of 360 degree rotations
+	rotationAnimation.toValue = @((2 * M_PI) * 3); // 3 is the number of 360 degree rotations
     // Make the rotation animation duration slightly less than the other animations to give it the feel
     // that it pauses at its largest scale value
 	rotationAnimation.duration = 1.9f;
 	rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
 	
 	CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-	scaleAnimation.fromValue = [NSNumber numberWithFloat:0.0];
-	scaleAnimation.toValue = [NSNumber numberWithFloat:1.0];
+	scaleAnimation.fromValue = @0.0f;
+	scaleAnimation.toValue = @1.0f;
 	scaleAnimation.duration = 2.0f;
 	scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
 	
@@ -110,7 +108,7 @@
 	animationGroup.duration = 2.0f;
 	animationGroup.autoreverses = YES;
 	animationGroup.repeatCount = HUGE_VALF;
-	[animationGroup setAnimations:[NSArray arrayWithObjects:rotationAnimation, scaleAnimation, nil]];
+	[animationGroup setAnimations:@[rotationAnimation, scaleAnimation]];
 
 	[self.logoLayer addAnimation:animationGroup forKey:@"animationGroup"];
 }
