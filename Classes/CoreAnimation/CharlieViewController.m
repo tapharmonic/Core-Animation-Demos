@@ -79,7 +79,7 @@ static const CGFloat curve = 5.0;
 }
 
 - (void)togglePath {
-	CALayer *layer = [[self.view.layer sublayers] objectAtIndex:0];
+	CALayer *layer = [self.view.layer sublayers][0];
 	layer.shadowPath = (layer.shadowPath) ? nil : [self bezierPathWithCurvedShadowForRect:layer.bounds].CGPath;
 }
 

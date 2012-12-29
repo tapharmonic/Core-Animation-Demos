@@ -76,13 +76,13 @@
 
 // Rotate the layer around the Y-axis as slider value is changed
 -(IBAction)sliderValueChanged:(UISlider *)sender{
-	CALayer *layer = [[self.view.layer sublayers] objectAtIndex:0];
+	CALayer *layer = [self.view.layer sublayers][0];
 	layer.transform = CATransform3DMakeRotation([sender value], 0, 1, 0);
 }
 
 // Animate spinning video around X-axis
 - (void)spinIt {
-	CALayer *layer = [[self.view.layer sublayers] objectAtIndex:0];
+	CALayer *layer = [self.view.layer sublayers][0];
 	CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.x"];
 	animation.duration = 1.25f;
 	animation.toValue = @(DEGREES_TO_RADIANS(360));

@@ -87,13 +87,13 @@
 #pragma mark Table view data source
 
 - (NSArray *)valuesForSection:(NSUInteger)section {
-	NSDictionary *dictionary = [self.items objectAtIndex:section];
-	NSString *key = [[dictionary allKeys] objectAtIndex:0];
-	return [dictionary objectForKey:key];
+	NSDictionary *dictionary = (self.items)[section];
+	NSString *key = [dictionary allKeys][0];
+	return dictionary[key];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	return [[[self.items objectAtIndex:section] allKeys] objectAtIndex:0];	
+	return [(self.items)[section] allKeys][0];	
 }
 
 // Customize the number of sections in the table view.
@@ -118,7 +118,7 @@
     
 	
 	NSArray *values = [self valuesForSection:indexPath.section];
-	cell.textLabel.text = [[values objectAtIndex:indexPath.row] displayName];
+	cell.textLabel.text = [values[indexPath.row] displayName];
 	
 	return cell;
 }
@@ -128,7 +128,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSArray *values = [self valuesForSection:indexPath.section];
-	Class clazz = [values objectAtIndex:indexPath.row];
+	Class clazz = values[indexPath.row];
 	id controller = [[clazz alloc] init];
 	[self.navigationController pushViewController:controller animated:YES];
 }
