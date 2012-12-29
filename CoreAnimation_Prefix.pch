@@ -16,8 +16,6 @@
 
 #define DEGREES_TO_RADIANS(d) (d * M_PI / 180)
 
-#define CARelease(obj) { [obj release]; obj = nil; }
-
 static CGPoint midPoint(CGRect r) {
     return CGPointMake(CGRectGetMidX(r), CGRectGetMidY(r));
 }

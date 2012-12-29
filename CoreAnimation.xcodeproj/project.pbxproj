@@ -24,6 +24,7 @@
 		C436495F1323954E00107F88 /* BatmanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C436495A1323954E00107F88 /* BatmanViewController.m */; };
 		C43649601323954E00107F88 /* PacmanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C436495C1323954E00107F88 /* PacmanViewController.m */; };
 		C43649611323954E00107F88 /* TachometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C436495E1323954E00107F88 /* TachometerViewController.m */; };
+		C448C241168F861D00964E55 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C448C240168F861D00964E55 /* Default-568h@2x.png */; };
 		C456E7DC1328A45700E7E245 /* SublayerTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C456E7DB1328A45700E7E245 /* SublayerTransformViewController.m */; };
 		C462EEE0132576FD00D0F181 /* AVPlayerLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C462EEDF132576FD00D0F181 /* AVPlayerLayerViewController.m */; };
 		C4885B241324B57200E9CAD2 /* SimpleViewPropertyAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4885B231324B57200E9CAD2 /* SimpleViewPropertyAnimation.m */; };
@@ -91,6 +92,7 @@
 		C436495C1323954E00107F88 /* PacmanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PacmanViewController.m; sourceTree = "<group>"; };
 		C436495D1323954E00107F88 /* TachometerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TachometerViewController.h; sourceTree = "<group>"; };
 		C436495E1323954E00107F88 /* TachometerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TachometerViewController.m; sourceTree = "<group>"; };
+		C448C240168F861D00964E55 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C456E7DA1328A45700E7E245 /* SublayerTransformViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SublayerTransformViewController.h; sourceTree = "<group>"; };
 		C456E7DB1328A45700E7E245 /* SublayerTransformViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SublayerTransformViewController.m; sourceTree = "<group>"; };
 		C462EEDE132576FD00D0F181 /* AVPlayerLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerLayerViewController.h; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 		C4888908132BFF470097A44E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C448C240168F861D00964E55 /* Default-568h@2x.png */,
 				C4888909132BFF470097A44E /* arrow-down.png */,
 				C488890A132BFF470097A44E /* arrow-left.png */,
 				C488890B132BFF470097A44E /* arrow-right.png */,
@@ -393,6 +396,7 @@
 				C488893E132BFF470097A44E /* MainWindow.xib in Resources */,
 				C4888940132BFF470097A44E /* RootViewController.xib in Resources */,
 				C4888942132BFF470097A44E /* BatmanView.xib in Resources */,
+				C448C241168F861D00964E55 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
