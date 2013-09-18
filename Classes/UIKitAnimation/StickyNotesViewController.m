@@ -33,6 +33,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 	self.title = [[self class] displayName];
 	self.noteView = [[NoteView alloc] initWithFrame:CGRectMake(0, 0, 280, 300)];
 	self.noteView.delegate = self;

@@ -38,7 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
+	self.edgesForExtendedLayout = UIRectEdgeNone;
 	self.title = [[self class] displayName];
 	
 	self.view.backgroundColor = [UIColor blackColor];
@@ -67,7 +67,7 @@
 	
     // Create a CAself.shapeLayer for Pacman, fill with yellow
 	self.shapeLayer = [CAShapeLayer layer];
-	self.shapeLayer.fillColor = [UIColor yellowColor].CGColor;
+	self.shapeLayer.fillColor = [UIColor colorWithRed:0.990 green:0.916 blue:0.137 alpha:1.000].CGColor;
 	self.shapeLayer.path = self.pacmanClosedPath.CGPath;
 	self.shapeLayer.strokeColor = [UIColor grayColor].CGColor;
 	self.shapeLayer.lineWidth = 1.0f;

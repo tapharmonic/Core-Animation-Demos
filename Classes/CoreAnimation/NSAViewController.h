@@ -25,6 +25,6 @@
 /*
  * Demo using shadowPath property to give greater depth and realism to layers.  Tap photo to toggle shadow path.
  */
-@interface CharlieViewController : UIViewController
+@interface NSAViewController : UIViewController
 
 @end

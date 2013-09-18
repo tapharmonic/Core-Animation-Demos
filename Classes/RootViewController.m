@@ -28,7 +28,7 @@
 #import "BatmanViewController.h"
 #import "PacmanViewController.h"
 #import "ImplicitAnimationsViewController.h"
-#import "CharlieViewController.h"
+#import "NSAViewController.h"
 #import "SimpleViewPropertyAnimation.h"
 #import "StickyNotesViewController.h"
 #import "AVPlayerLayerViewController.h"
@@ -64,7 +64,7 @@
 	[layersList addObject:[PacmanViewController class]];
 	[layersList addObject:[SublayerTransformViewController class]];
 	[layersList addObject:[AVPlayerLayerViewController class]];
-	[layersList addObject:[CharlieViewController class]];
+	[layersList addObject:[NSAViewController class]];
 	[layersList addObject:[ReflectionViewController class]];
 	[layersList addObject:[PulseViewController class]];
 

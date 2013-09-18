@@ -22,15 +22,15 @@
 //  THE SOFTWARE.
 //
 
-#import "CharlieViewController.h"
+#import "NSAViewController.h"
 
 static const CGFloat offset = 10.0;
 static const CGFloat curve = 5.0;
 
-@implementation CharlieViewController
+@implementation NSAViewController
 
 + (NSString *)displayName {
-	return @"Winning";
+	return @"NSA Blues";
 }
 
 // This method taken verbatim from Joe Ricciopo's Shadow Demo:
@@ -58,15 +58,16 @@ static const CGFloat curve = 5.0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 	self.view.backgroundColor = [UIColor whiteColor];
 	self.title = [[self class] displayName];
 	
-	UIImage *charlieImage = [UIImage imageNamed:@"charlie.png"];
+	UIImage *charlieImage = [UIImage imageNamed:@"obama"];
 	CALayer *layer = [CALayer layer];
 	
 	layer = [CALayer layer];
 	layer.bounds = CGRectMake(0, 0, charlieImage.size.width, charlieImage.size.height);
-	layer.position = CGPointMake(160, 200);
+	layer.position = CGPointMake(160, 220);
 	layer.contents = (id)charlieImage.CGImage;	
 	
 	layer.shadowOffset = CGSizeMake(0, 2);

@@ -17,7 +17,7 @@
 		C4219BE71325D98000FB5EA0 /* FlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4219BE61325D98000FB5EA0 /* FlipViewController.m */; };
 		C423AA4C1325414100B2A34D /* StickyNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C423AA4B1325414100B2A34D /* StickyNotesViewController.m */; };
 		C423AA52132543A300B2A34D /* NoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = C423AA51132543A300B2A34D /* NoteView.m */; };
-		C4334BB813248BE80023A4EA /* CharlieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4334BB713248BE80023A4EA /* CharlieViewController.m */; };
+		C4334BB813248BE80023A4EA /* NSAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4334BB713248BE80023A4EA /* NSAViewController.m */; };
 		C43499D015ECDD3000AD9F40 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43499CF15ECDD3000AD9F40 /* AVFoundation.framework */; };
 		C43499D215ECDD9600AD9F40 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43499D115ECDD9500AD9F40 /* CoreMedia.framework */; };
 		C43648F71323902200107F88 /* ImplicitAnimationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C43648F01323902200107F88 /* ImplicitAnimationsViewController.m */; };
@@ -26,6 +26,15 @@
 		C43649611323954E00107F88 /* TachometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C436495E1323954E00107F88 /* TachometerViewController.m */; };
 		C448C241168F861D00964E55 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C448C240168F861D00964E55 /* Default-568h@2x.png */; };
 		C456E7DC1328A45700E7E245 /* SublayerTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C456E7DB1328A45700E7E245 /* SublayerTransformViewController.m */; };
+		C4573C6F17E9873600A338E0 /* obama.png in Resources */ = {isa = PBXBuildFile; fileRef = C4573C6E17E9873600A338E0 /* obama.png */; };
+		C4573C8017E98E9C00A338E0 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = C4573C7C17E98E9C00A338E0 /* pin.png */; };
+		C4573C8117E98E9C00A338E0 /* pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4573C7D17E98E9C00A338E0 /* pin@2x.png */; };
+		C4573C8217E98E9C00A338E0 /* tach.png in Resources */ = {isa = PBXBuildFile; fileRef = C4573C7E17E98E9C00A338E0 /* tach.png */; };
+		C4573C8317E98E9C00A338E0 /* tach@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4573C7F17E98E9C00A338E0 /* tach@2x.png */; };
+		C4573C8A17E991D100A338E0 /* batman.png in Resources */ = {isa = PBXBuildFile; fileRef = C4573C8617E991D100A338E0 /* batman.png */; };
+		C4573C8B17E991D100A338E0 /* batman@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4573C8717E991D100A338E0 /* batman@2x.png */; };
+		C4573C8E17E992BE00A338E0 /* BatmanButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C4573C8C17E992BE00A338E0 /* BatmanButton.png */; };
+		C4573C8F17E992BE00A338E0 /* BatmanButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4573C8D17E992BE00A338E0 /* BatmanButton@2x.png */; };
 		C462EEE0132576FD00D0F181 /* AVPlayerLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C462EEDF132576FD00D0F181 /* AVPlayerLayerViewController.m */; };
 		C4885B241324B57200E9CAD2 /* SimpleViewPropertyAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4885B231324B57200E9CAD2 /* SimpleViewPropertyAnimation.m */; };
 		C4888927132BFF470097A44E /* engine.caf in Resources */ = {isa = PBXBuildFile; fileRef = C4888907132BFF470097A44E /* engine.caf */; };
@@ -34,20 +43,13 @@
 		C488892A132BFF470097A44E /* arrow-right.png in Resources */ = {isa = PBXBuildFile; fileRef = C488890B132BFF470097A44E /* arrow-right.png */; };
 		C488892B132BFF470097A44E /* arrow-up.png in Resources */ = {isa = PBXBuildFile; fileRef = C488890C132BFF470097A44E /* arrow-up.png */; };
 		C488892C132BFF470097A44E /* backView.png in Resources */ = {isa = PBXBuildFile; fileRef = C488890D132BFF470097A44E /* backView.png */; };
-		C488892D132BFF470097A44E /* batman.png in Resources */ = {isa = PBXBuildFile; fileRef = C488890E132BFF470097A44E /* batman.png */; };
-		C488892E132BFF470097A44E /* BatmanButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C488890F132BFF470097A44E /* BatmanButton.png */; };
 		C488892F132BFF470097A44E /* BobMcCune.png in Resources */ = {isa = PBXBuildFile; fileRef = C4888910132BFF470097A44E /* BobMcCune.png */; };
 		C4888930132BFF470097A44E /* caLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C4888911132BFF470097A44E /* caLogo.png */; };
-		C4888931132BFF470097A44E /* charlie.png in Resources */ = {isa = PBXBuildFile; fileRef = C4888912132BFF470097A44E /* charlie.png */; };
 		C4888932132BFF470097A44E /* corkboard.png in Resources */ = {isa = PBXBuildFile; fileRef = C4888913132BFF470097A44E /* corkboard.png */; };
 		C4888933132BFF470097A44E /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = C4888914132BFF470097A44E /* heart.png */; };
-		C4888934132BFF470097A44E /* metalbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C4888915132BFF470097A44E /* metalbackground.png */; };
 		C4888935132BFF470097A44E /* mountains.png in Resources */ = {isa = PBXBuildFile; fileRef = C4888916132BFF470097A44E /* mountains.png */; };
 		C4888936132BFF470097A44E /* new_note_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C4888917132BFF470097A44E /* new_note_icon.png */; };
 		C4888937132BFF470097A44E /* pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = C4888918132BFF470097A44E /* pattern.png */; };
-		C4888938132BFF470097A44E /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = C4888919132BFF470097A44E /* pin.png */; };
-		C4888939132BFF470097A44E /* speed.png in Resources */ = {isa = PBXBuildFile; fileRef = C488891A132BFF470097A44E /* speed.png */; };
-		C488893A132BFF470097A44E /* tach.png in Resources */ = {isa = PBXBuildFile; fileRef = C488891B132BFF470097A44E /* tach.png */; };
 		C488893B132BFF470097A44E /* cyborg.m4v in Resources */ = {isa = PBXBuildFile; fileRef = C488891D132BFF470097A44E /* cyborg.m4v */; };
 		C488893C132BFF470097A44E /* CoreAnimationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C488891F132BFF470097A44E /* CoreAnimationView.xib */; };
 		C488893D132BFF470097A44E /* LayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4888920132BFF470097A44E /* LayerView.xib */; };
@@ -80,8 +82,8 @@
 		C423AA4B1325414100B2A34D /* StickyNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickyNotesViewController.m; sourceTree = "<group>"; };
 		C423AA50132543A300B2A34D /* NoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteView.h; sourceTree = "<group>"; };
 		C423AA51132543A300B2A34D /* NoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteView.m; sourceTree = "<group>"; };
-		C4334BB613248BE80023A4EA /* CharlieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharlieViewController.h; sourceTree = "<group>"; };
-		C4334BB713248BE80023A4EA /* CharlieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharlieViewController.m; sourceTree = "<group>"; };
+		C4334BB613248BE80023A4EA /* NSAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAViewController.h; sourceTree = "<group>"; };
+		C4334BB713248BE80023A4EA /* NSAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAViewController.m; sourceTree = "<group>"; };
 		C43499CF15ECDD3000AD9F40 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C43499D115ECDD9500AD9F40 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		C43648EF1323902200107F88 /* ImplicitAnimationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImplicitAnimationsViewController.h; sourceTree = "<group>"; };
@@ -95,6 +97,15 @@
 		C448C240168F861D00964E55 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C456E7DA1328A45700E7E245 /* SublayerTransformViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SublayerTransformViewController.h; sourceTree = "<group>"; };
 		C456E7DB1328A45700E7E245 /* SublayerTransformViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SublayerTransformViewController.m; sourceTree = "<group>"; };
+		C4573C6E17E9873600A338E0 /* obama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = obama.png; sourceTree = "<group>"; };
+		C4573C7C17E98E9C00A338E0 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		C4573C7D17E98E9C00A338E0 /* pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin@2x.png"; sourceTree = "<group>"; };
+		C4573C7E17E98E9C00A338E0 /* tach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tach.png; sourceTree = "<group>"; };
+		C4573C7F17E98E9C00A338E0 /* tach@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tach@2x.png"; sourceTree = "<group>"; };
+		C4573C8617E991D100A338E0 /* batman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = batman.png; sourceTree = "<group>"; };
+		C4573C8717E991D100A338E0 /* batman@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "batman@2x.png"; sourceTree = "<group>"; };
+		C4573C8C17E992BE00A338E0 /* BatmanButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BatmanButton.png; sourceTree = "<group>"; };
+		C4573C8D17E992BE00A338E0 /* BatmanButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BatmanButton@2x.png"; sourceTree = "<group>"; };
 		C462EEDE132576FD00D0F181 /* AVPlayerLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerLayerViewController.h; sourceTree = "<group>"; };
 		C462EEDF132576FD00D0F181 /* AVPlayerLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerLayerViewController.m; sourceTree = "<group>"; };
 		C4885B221324B57200E9CAD2 /* SimpleViewPropertyAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleViewPropertyAnimation.h; sourceTree = "<group>"; };
@@ -105,20 +116,13 @@
 		C488890B132BFF470097A44E /* arrow-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-right.png"; sourceTree = "<group>"; };
 		C488890C132BFF470097A44E /* arrow-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-up.png"; sourceTree = "<group>"; };
 		C488890D132BFF470097A44E /* backView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backView.png; sourceTree = "<group>"; };
-		C488890E132BFF470097A44E /* batman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = batman.png; sourceTree = "<group>"; };
-		C488890F132BFF470097A44E /* BatmanButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BatmanButton.png; sourceTree = "<group>"; };
 		C4888910132BFF470097A44E /* BobMcCune.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BobMcCune.png; sourceTree = "<group>"; };
 		C4888911132BFF470097A44E /* caLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caLogo.png; sourceTree = "<group>"; };
-		C4888912132BFF470097A44E /* charlie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = charlie.png; sourceTree = "<group>"; };
 		C4888913132BFF470097A44E /* corkboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corkboard.png; sourceTree = "<group>"; };
 		C4888914132BFF470097A44E /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
-		C4888915132BFF470097A44E /* metalbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metalbackground.png; sourceTree = "<group>"; };
 		C4888916132BFF470097A44E /* mountains.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mountains.png; sourceTree = "<group>"; };
 		C4888917132BFF470097A44E /* new_note_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_note_icon.png; sourceTree = "<group>"; };
 		C4888918132BFF470097A44E /* pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pattern.png; sourceTree = "<group>"; };
-		C4888919132BFF470097A44E /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
-		C488891A132BFF470097A44E /* speed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speed.png; sourceTree = "<group>"; };
-		C488891B132BFF470097A44E /* tach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tach.png; sourceTree = "<group>"; };
 		C488891D132BFF470097A44E /* cyborg.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = cyborg.m4v; sourceTree = "<group>"; };
 		C488891F132BFF470097A44E /* CoreAnimationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoreAnimationView.xib; sourceTree = "<group>"; };
 		C4888920132BFF470097A44E /* LayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LayerView.xib; sourceTree = "<group>"; };
@@ -215,8 +219,8 @@
 				C436495A1323954E00107F88 /* BatmanViewController.m */,
 				C488894A132C07030097A44E /* CALayer+Additions.h */,
 				C488894B132C07030097A44E /* CALayer+Additions.m */,
-				C4334BB613248BE80023A4EA /* CharlieViewController.h */,
-				C4334BB713248BE80023A4EA /* CharlieViewController.m */,
+				C4334BB613248BE80023A4EA /* NSAViewController.h */,
+				C4334BB713248BE80023A4EA /* NSAViewController.m */,
 				C43648EF1323902200107F88 /* ImplicitAnimationsViewController.h */,
 				C43648F01323902200107F88 /* ImplicitAnimationsViewController.m */,
 				C4C6B05613274C8E005AB613 /* MakeItStickViewController.h */,
@@ -273,26 +277,28 @@
 		C4888908132BFF470097A44E /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				C448C240168F861D00964E55 /* Default-568h@2x.png */,
+				C4573C8C17E992BE00A338E0 /* BatmanButton.png */,
+				C4573C8D17E992BE00A338E0 /* BatmanButton@2x.png */,
+				C4573C8617E991D100A338E0 /* batman.png */,
+				C4573C8717E991D100A338E0 /* batman@2x.png */,
+				C4573C7C17E98E9C00A338E0 /* pin.png */,
+				C4573C7D17E98E9C00A338E0 /* pin@2x.png */,
+				C4573C7E17E98E9C00A338E0 /* tach.png */,
+				C4573C7F17E98E9C00A338E0 /* tach@2x.png */,
 				C4888909132BFF470097A44E /* arrow-down.png */,
 				C488890A132BFF470097A44E /* arrow-left.png */,
 				C488890B132BFF470097A44E /* arrow-right.png */,
 				C488890C132BFF470097A44E /* arrow-up.png */,
 				C488890D132BFF470097A44E /* backView.png */,
-				C488890E132BFF470097A44E /* batman.png */,
-				C488890F132BFF470097A44E /* BatmanButton.png */,
 				C4888910132BFF470097A44E /* BobMcCune.png */,
 				C4888911132BFF470097A44E /* caLogo.png */,
-				C4888912132BFF470097A44E /* charlie.png */,
 				C4888913132BFF470097A44E /* corkboard.png */,
+				C448C240168F861D00964E55 /* Default-568h@2x.png */,
 				C4888914132BFF470097A44E /* heart.png */,
-				C4888915132BFF470097A44E /* metalbackground.png */,
 				C4888916132BFF470097A44E /* mountains.png */,
 				C4888917132BFF470097A44E /* new_note_icon.png */,
+				C4573C6E17E9873600A338E0 /* obama.png */,
 				C4888918132BFF470097A44E /* pattern.png */,
-				C4888919132BFF470097A44E /* pin.png */,
-				C488891A132BFF470097A44E /* speed.png */,
-				C488891B132BFF470097A44E /* tach.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -373,23 +379,24 @@
 				C4888927132BFF470097A44E /* engine.caf in Resources */,
 				C4888928132BFF470097A44E /* arrow-down.png in Resources */,
 				C4888929132BFF470097A44E /* arrow-left.png in Resources */,
+				C4573C8E17E992BE00A338E0 /* BatmanButton.png in Resources */,
 				C488892A132BFF470097A44E /* arrow-right.png in Resources */,
 				C488892B132BFF470097A44E /* arrow-up.png in Resources */,
 				C488892C132BFF470097A44E /* backView.png in Resources */,
-				C488892D132BFF470097A44E /* batman.png in Resources */,
-				C488892E132BFF470097A44E /* BatmanButton.png in Resources */,
+				C4573C6F17E9873600A338E0 /* obama.png in Resources */,
 				C488892F132BFF470097A44E /* BobMcCune.png in Resources */,
 				C4888930132BFF470097A44E /* caLogo.png in Resources */,
-				C4888931132BFF470097A44E /* charlie.png in Resources */,
+				C4573C8A17E991D100A338E0 /* batman.png in Resources */,
+				C4573C8217E98E9C00A338E0 /* tach.png in Resources */,
+				C4573C8117E98E9C00A338E0 /* pin@2x.png in Resources */,
 				C4888932132BFF470097A44E /* corkboard.png in Resources */,
 				C4888933132BFF470097A44E /* heart.png in Resources */,
-				C4888934132BFF470097A44E /* metalbackground.png in Resources */,
 				C4888935132BFF470097A44E /* mountains.png in Resources */,
+				C4573C8317E98E9C00A338E0 /* tach@2x.png in Resources */,
+				C4573C8B17E991D100A338E0 /* batman@2x.png in Resources */,
 				C4888936132BFF470097A44E /* new_note_icon.png in Resources */,
 				C4888937132BFF470097A44E /* pattern.png in Resources */,
-				C4888938132BFF470097A44E /* pin.png in Resources */,
-				C4888939132BFF470097A44E /* speed.png in Resources */,
-				C488893A132BFF470097A44E /* tach.png in Resources */,
+				C4573C8F17E992BE00A338E0 /* BatmanButton@2x.png in Resources */,
 				C488893B132BFF470097A44E /* cyborg.m4v in Resources */,
 				C488893C132BFF470097A44E /* CoreAnimationView.xib in Resources */,
 				C488893D132BFF470097A44E /* LayerView.xib in Resources */,
@@ -397,6 +404,7 @@
 				C4888940132BFF470097A44E /* RootViewController.xib in Resources */,
 				C4888942132BFF470097A44E /* BatmanView.xib in Resources */,
 				C448C241168F861D00964E55 /* Default-568h@2x.png in Resources */,
+				C4573C8017E98E9C00A338E0 /* pin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +422,7 @@
 				C436495F1323954E00107F88 /* BatmanViewController.m in Sources */,
 				C43649601323954E00107F88 /* PacmanViewController.m in Sources */,
 				C43649611323954E00107F88 /* TachometerViewController.m in Sources */,
-				C4334BB813248BE80023A4EA /* CharlieViewController.m in Sources */,
+				C4334BB813248BE80023A4EA /* NSAViewController.m in Sources */,
 				C4885B241324B57200E9CAD2 /* SimpleViewPropertyAnimation.m in Sources */,
 				C423AA4C1325414100B2A34D /* StickyNotesViewController.m in Sources */,
 				C423AA52132543A300B2A34D /* NoteView.m in Sources */,

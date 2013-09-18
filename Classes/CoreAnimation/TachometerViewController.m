@@ -41,36 +41,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 	self.title = [[self class] displayName];
 	
+    self.view.backgroundColor = [UIColor colorWithWhite:0.661 alpha:1.000];
     // The animation was fun without the audio, but it's WAY better with the engine rev sound.
 	NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"engine" ofType:@"caf"]];
 	self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
 	[self.audioPlayer prepareToPlay];	
 	
-	UIImage *image = [UIImage imageNamed:@"metalbackground.png"];
-	self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-	
     // Create the tach's background layer
 	self.tachLayer = [CALayer layer];
 	self.tachLayer.bounds = CGRectMake(0, 0, 300, 300);
 	self.tachLayer.position = CGPointMake(160, 200);
-	self.tachLayer.contents = (id)[UIImage imageNamed:@"speed"].CGImage;
+	self.tachLayer.contents = (id)[UIImage imageNamed:@"tach"].CGImage;
 	[self.view.layer addSublayer:self.tachLayer];
 	
     // Create the layer for the pin
 	self.pinLayer = [CALayer layer];
-	self.pinLayer.bounds = CGRectMake(0, 0, 72, 54);
+	self.pinLayer.bounds = CGRectMake(0, 0, 68, 49);
 	self.pinLayer.contents = (id)[UIImage imageNamed:@"pin"].CGImage;
-	self.pinLayer.position = CGPointMake(150, 150);
+	self.pinLayer.position = CGPointMake(152, 148);
 	self.pinLayer.anchorPoint = CGPointMake(1.0, 1.0);
     // Rotate to the left 50 degrees so it lines up with the 0 position on the gauge
 	self.pinLayer.transform = CATransform3DRotate(self.pinLayer.transform, DEGREES_TO_RADIANS(-50), 0, 0, 1);
 	[self.tachLayer addSublayer:self.pinLayer];
 	
 	UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[button setTitle:@"Rev It!" forState:UIControlStateNormal];
-	button.frame = CGRectMake(230, 20, 80, 31);
+	[button setTitle:@"REV IT!" forState:UIControlStateNormal];
+    button.titleLabel.font = [UIFont boldSystemFontOfSize:20];
+    [button sizeToFit];
+    CGRect rect = button.bounds;
+    rect.origin.x = (self.view.bounds.size.width - rect.size.width) / 2;
+    rect.origin.y = 380;
+	button.frame = rect;
 	[button addTarget:self action:@selector(go:) forControlEvents:UIControlEventTouchUpInside];
 	[self.view addSubview:button];
 }

@@ -35,6 +35,9 @@
 
 - (id)init {
     self = [super initWithNibName:@"BatmanView" bundle:nil];
+    if (self) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
     return self;
 }
 
@@ -44,7 +47,6 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	
 	self.view.backgroundColor = [UIColor blackColor];
 	self.title = [[self class] displayName];
 	

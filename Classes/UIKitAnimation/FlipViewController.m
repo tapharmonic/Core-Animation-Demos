@@ -38,6 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 	self.title = [[self class] displayName];
     // Set the background color for the window.  The user will see the window's background color on the transition.
 	UIColor *backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"pattern.png"]];

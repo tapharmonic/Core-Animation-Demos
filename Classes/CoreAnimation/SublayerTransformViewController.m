@@ -40,8 +40,8 @@
 		CALayer *layer = [CALayer layer];
 		layer.backgroundColor = color.CGColor;
 		layer.bounds = CGRectMake(0, 0, 200, 200);
-		layer.position = CGPointMake(160, 170);
-		layer.opacity = 0.65;
+		layer.position = CGPointMake(160, 190);
+		layer.opacity = 0.80;
 		layer.cornerRadius = 10;
 		layer.borderColor = [UIColor whiteColor].CGColor;
 		layer.borderWidth = 1.0;
@@ -55,6 +55,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 	self.title = [[self class] displayName];
     
 	self.rootLayer = [CALayer layer];
@@ -63,7 +64,7 @@
 	self.rootLayer.frame = self.view.bounds;
 	[self.view.layer addSublayer:self.rootLayer];
 	
-	NSArray *colors = @[[UIColor redColor], [UIColor greenColor], [UIColor purpleColor]];
+	NSArray *colors = @[[UIColor colorWithRed:0.263 green:0.769 blue:0.319 alpha:1.000], [UIColor colorWithRed:0.990 green:0.759 blue:0.145 alpha:1.000], [UIColor colorWithRed:0.084 green:0.398 blue:0.979 alpha:1.000]];
 	[self addLayersWithColors:colors];
 	
 	[self performSelector:@selector(rotateLayers) withObject:nil afterDelay:1.0];

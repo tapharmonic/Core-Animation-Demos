@@ -33,9 +33,11 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 	self.title = [[self class] displayName];
-	self.view.backgroundColor = [UIColor darkGrayColor];
-	
+	self.view.backgroundColor = [UIColor colorWithRed:0.972 green:0.134 blue:0.173 alpha:1.000];
+    self.view.tintColor = [UIColor whiteColor];
+    
 	// Setup AVPlayer
     // Hilarious video from the guys at http://www.thekeyofawesome.com/
 	NSString *moviePath = [[NSBundle mainBundle] pathForResource:@"cyborg" ofType:@"m4v"];

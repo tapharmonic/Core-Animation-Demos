@@ -36,6 +36,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 	self.title = [[self class] displayName];
 	UIImage *image = [UIImage imageNamed:@"heart"];
 	self.layer = [CALayer layer];

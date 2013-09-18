@@ -32,6 +32,7 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 	self.title = [[self class] displayName];
 	self.view.backgroundColor = [UIColor whiteColor];
 	UIImage *image = [UIImage imageNamed:@"mountains.png"];
