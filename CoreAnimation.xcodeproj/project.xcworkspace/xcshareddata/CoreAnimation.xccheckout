@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>41624C74-CB8B-40E5-93F7-91D0349572D7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CoreAnimation</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F5E9AE9A-C540-42E1-AFBD-08F1A598856B</key>
+		<string>ssh://github.com/tapharmonic/Core-Animation-Demos.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CoreAnimation.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F5E9AE9A-C540-42E1-AFBD-08F1A598856B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/tapharmonic/Core-Animation-Demos.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F5E9AE9A-C540-42E1-AFBD-08F1A598856B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F5E9AE9A-C540-42E1-AFBD-08F1A598856B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Core-Animation-Demos</string>
+		</dict>
+	</array>
+</dict>
+</plist>
