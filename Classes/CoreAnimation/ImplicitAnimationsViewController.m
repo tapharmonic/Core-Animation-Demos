@@ -57,6 +57,13 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
 	self.actionsSwitch.on = NO;
 	self.title = [[self class] displayName];
+    
+    for (UIButton *button in self.buttons) {
+        button.layer.cornerRadius = 8.0f;
+        button.layer.borderWidth = 1.0f;
+        button.layer.borderColor = [UIColor colorWithRed:0.083 green:0.394 blue:0.979 alpha:1.000].CGColor;
+    }
+    
 }
 
 - (IBAction)toggleColor {

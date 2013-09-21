@@ -28,6 +28,7 @@
 @interface ImplicitAnimationsViewController : UIViewController
 
 @property (nonatomic, strong) IBOutlet UISwitch *actionsSwitch;
+@property (strong, nonatomic) IBOutletCollection(id) NSArray *buttons;
 
 - (IBAction)toggleCornerRadius;
 - (IBAction)toggleBorder;
