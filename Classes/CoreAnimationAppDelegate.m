@@ -34,6 +34,7 @@
     
 	// Set the navigationController as the window's root view controller
 	self.window.rootViewController = self.navigationController;
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
     return YES;

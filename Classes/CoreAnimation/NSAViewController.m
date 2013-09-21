@@ -24,8 +24,12 @@
 
 #import "NSAViewController.h"
 
-static const CGFloat offset = 10.0;
-static const CGFloat curve = 5.0;
+static const CGFloat offset = 15.0;
+static const CGFloat curve = 3.0;
+
+@interface NSAViewController ()
+@property (strong, nonatomic) CALayer *layer;
+@end
 
 @implementation NSAViewController
 
@@ -42,7 +46,7 @@ static const CGFloat curve = 5.0;
 	
 	CGPoint topLeft		 = rect.origin;
 	CGPoint bottomLeft	 = CGPointMake(0.0, CGRectGetHeight(rect) + offset);
-	CGPoint bottomMiddle = CGPointMake(CGRectGetWidth(rect)/2, CGRectGetHeight(rect) - curve);	
+	CGPoint bottomMiddle = CGPointMake(CGRectGetWidth(rect)/2, CGRectGetHeight(rect) - curve);
 	CGPoint bottomRight	 = CGPointMake(CGRectGetWidth(rect), CGRectGetHeight(rect) + offset);
 	CGPoint topRight	 = CGPointMake(CGRectGetWidth(rect), 0.0);
 	
@@ -61,27 +65,44 @@ static const CGFloat curve = 5.0;
     self.edgesForExtendedLayout = UIRectEdgeNone;
 	self.view.backgroundColor = [UIColor whiteColor];
 	self.title = [[self class] displayName];
+    
+    [self addInstructionLabel];
 	
-	UIImage *charlieImage = [UIImage imageNamed:@"obama"];
-	CALayer *layer = [CALayer layer];
+	UIImage *obamaImage = [UIImage imageNamed:@"obama"];
 	
-	layer = [CALayer layer];
-	layer.bounds = CGRectMake(0, 0, charlieImage.size.width, charlieImage.size.height);
-	layer.position = CGPointMake(160, 220);
-	layer.contents = (id)charlieImage.CGImage;	
+	self.layer = [CALayer layer];
+	self.layer.bounds = CGRectMake(0, 0, obamaImage.size.width, obamaImage.size.height);
+	self.layer.position = CGPointMake(160, 220);
+	self.layer.contents = (id)obamaImage.CGImage;
 	
-	layer.shadowOffset = CGSizeMake(0, 2);
-	layer.shadowOpacity = 0.70;
+    if (self.view.bounds.size.height < 658) {
+        self.layer.transform = CATransform3DMakeScale(0.85, 0.85, 1.0);
+    }
 	
-	[self.view.layer addSublayer:layer];
+	self.layer.shadowOffset = CGSizeMake(0, 3);
+	self.layer.shadowOpacity = 0.80;
+    self.layer.shadowRadius = 6.0f;
+    self.layer.shadowColor = [UIColor darkGrayColor].CGColor;
+	
+	[self.view.layer addSublayer:self.layer];
 	
 	UIGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(togglePath)];
 	[self.view addGestureRecognizer:tapRecognizer];
 }
 
+- (void)addInstructionLabel {
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+    label.text = @"Tap Image";
+    label.textColor = [UIColor blackColor];
+    [label sizeToFit];
+
+    CGFloat x = (self.view.bounds.size.width - label.bounds.size.width) / 2;
+    label.frame = CGRectMake(x, 20, label.bounds.size.width, label.bounds.size.height);
+    [self.view addSubview:label];
+}
+
 - (void)togglePath {
-	CALayer *layer = [self.view.layer sublayers][0];
-	layer.shadowPath = (layer.shadowPath) ? nil : [self bezierPathWithCurvedShadowForRect:layer.bounds].CGPath;
+	self.layer.shadowPath = (self.layer.shadowPath) ? nil : [self bezierPathWithCurvedShadowForRect:self.layer.bounds].CGPath;
 }
 
 @end
