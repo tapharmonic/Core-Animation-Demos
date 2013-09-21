@@ -109,7 +109,7 @@
 	CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
 	animationGroup.duration = 2.0f;
 	animationGroup.autoreverses = YES;
-	animationGroup.repeatCount = HUGE_VALF;
+	animationGroup.repeatCount = 0;
 	[animationGroup setAnimations:@[rotationAnimation, scaleAnimation]];
 
 	[self.logoLayer addAnimation:animationGroup forKey:@"animationGroup"];
